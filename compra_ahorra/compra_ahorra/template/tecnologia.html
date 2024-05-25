@@ -1,0 +1,74 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Tecnologia{% endblock title %}
+{% block content %}
+<center>
+    <div class="">
+        <img src="{% static 'IMG/tecnologia/lo mejor en.webp' %}" alt="" class="img-item ml-5 img-container" width="1860">
+    </div>
+</center>
+
+<section class="contenedor">
+    <!-- Contenedor de elementos -->
+    <div class="contenedor-items">
+        <div class="item item bg-light">
+            <span class="titulo-item">Consola Play station 5 + dualsense</span>
+            <img src="{% static 'IMG/tecnologia/ps5 normal.jpg' %}" alt="" class="img-item" height="150" height="250">
+            <span class="precio-item">$570.990</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item bg-light">
+            <span class="titulo-item">Posta Rosada</span>
+            <img src="{% static 'IMG/tecnologia/adaptador.webp' %}" alt="" class="img-item" height="190">
+            <span class="precio-item">$8.255</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item bg-light">
+            <span class="titulo-item">Xiaomi red mi note 13 </span>
+            <img src="{% static 'IMG/tecnologia/celular.webp' %}" alt="" class="img-item" height="170">
+            <span class="precio-item">$357.590</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item bg-light">
+            <span class="titulo-item">Notebook idepad gaming</span>
+            <img src="{% static 'IMG/tecnologia/note.webp' %}" alt="" class="img-item">
+            <span class="precio-item">$749.990</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item bg-light">
+            <span class="titulo-item">consola nintendo switch V2</span>
+            <img src="{% static 'IMG/tecnologia/swtich.webp' %}" alt="" class="img-item">
+            <span class="precio-item">$299.000</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+        <div class="item bg-light">
+            <span class="titulo-item">monitor garmer curvo led 27</span>
+            <img src="{% static 'IMG/tecnologia/pantalla.webp' %}" alt="" class="img-item">
+            <span class="precio-item">$149.990</span>
+            <button class="boton-item">Agregar al Carrito</button>
+        </div>
+    </div>
+    <!-- Carrito de Compras -->
+    <div class="carrito" id="carrito">
+        <div class="header-carrito">
+            <h2>Tu Carrito</h2>
+        </div>
+
+        <div class="carrito-items">
+        </div>
+        <div class="carrito-total">
+            <div class="fila">
+                <strong>Tu Total</strong>
+                <span class="carrito-precio-total">
+                    $120.000,00
+                </span>
+            </div>
+            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i> </button>
+        </div>
+    </div>
+</section>
+<center>
+    <div>
+        <img src="{% static 'IMG/tecnologia/especial computacion.webp' %}" alt="">
+    </div>
+</center>
+{% endblock content %}

@@ -1,0 +1,134 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Compra ahorra{% endblock title %}
+{% block content %}
+<section style="margin-bottom: 50px; margin-left: 100px;">
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <!--carrusel-->
+        <div class="container">
+            <div class="container-fluid">
+                <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                    <center>
+                        <div class="carousel-inner"
+                            style="height: 400px; width: 750px; margin-top: 20px; margin-bottom: 20px; ">
+                            <div class="carousel-item active">
+                                <img src="{% static 'IMG/ofertas/40% off moda.jpg' %}" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'IMG/ofertas/off zapatillas.jpg' %}" class="d-block w-100"
+                                    alt="...">
+                                <div class="carousel-caption d-none d-md-block">
+                                    <p>
+                                    <h2 style="color: white; font-size: 30px;background-color: rgb(5, 5, 5);">Carnes de
+                                        Calidad y al Mejor Precio!!!</h2>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="{% static 'IMG/ofertas/fensa ofertas.webp' %}" class="d-block w-100"
+                                    alt="...">
+                            </div>
+                        </div>
+                    </center>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+<!-- Contenedor de elementos 
+<p><h1 class="margen-general-centro"> ¡¡¡SUPER OFERTAS DEL MES!!!</h1></p>
+-->
+<div>
+    <section class="contenedor">
+        <!-- Contenedor de elementos -->
+        <div class="contenedor-items">
+            <div class="item bg-light">
+                <span class="titulo-item">Nintendo 2ds</span>
+                <img src="{% static 'IMG//n2ds.jfif' %}" alt="" class="img-item">
+                <span class="precio-item">$140.190</span>
+                <p class="card-text">Consola nintendo 2ds blue</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item bg-light">
+                <span class="titulo-item">Memoria ram Hyper X</span>
+                <img src="{% static 'IMG/ra.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$33.790</span>
+                <p class="card-text">Memoria ram 16GB</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item bg-light">
+                <span class="titulo-item">Tarjeta video RTX 4090</span>
+                <img src="{% static 'IMG/rtx4090.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$962.190</span>
+                <p class="card-text">Gpu zotac RTX 4090 24b</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+    <section class="contenedor ">
+        <div class="contenedor-items">
+            <div class="item bg-light">
+                <span class="titulo-item">logitech g502 hero</span>
+                <img src="{% static 'IMG/mouse logitwch.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$35.140</span>
+                <p class="card-text">Mouse logitech g502 hero</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item bg-light">
+                <span class="titulo-item">Silla gamer cougar</span>
+                <img src="{% static 'IMG/silla cougar.webp' %}" alt="" class="img-item">
+                <span class="precio-item">$99.190</span>
+                <p class="card-text">silla gamer cougar fusion</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+            <div class="item bg-light">
+                <span class="titulo-item">Mini cooler 100 Litros</span>
+                <img src="{% static 'IMG/mini coller.jpg' %}" alt="" class="img-item">
+                <span class="precio-item">$83.700</span>
+                <p class="card-text">Mini cooler 100 Litros.</p>
+                <button class="boton-item">Agregar al Carrito</button>
+            </div>
+        </div>
+    </section>
+    <br>
+</div>
+<div class="row">
+    <div class="col-8">
+        <div class="row" style="padding: 10px 0;">
+            <div class="col-12">
+                <div class="row">
+                    {% for producto in productos %}
+                    <div class="col-6">
+                        <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                            <div class="card-body">
+                                <h5 class="card-tittle">{{producto.nombre}}</h5>
+                                <p class="card-text">{{producto.categoria}}</p>
+                                <p class="card-text">{{producto.precio}}</p>
+                                <a href="#" class="btn btn-primary">agregar al carrito</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-4">
+        carrito
+    </div>
+</div>
+
+<div>
+    <center>
+        <img src="{% static 'IMG/ofertas/solo por hoy.png' %}" alt="" class="img-item m-5">
+    </center>
+</div>
+{% endblock content %}
